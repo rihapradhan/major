@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Poly:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Waterfall&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: white;
+    --foreground: #e6ece7;
+
+    --card: #dde5d6;
+    --card-foreground: #cbd7ce;
+    --popover: hsl(104, 13%, 77%);
+    --popover-foreground: #afb9ab;
+
+    --primary: #809d88;
+    --primary-foreground: hsl(60 9.1% 97.8%);
+
+    --secondary: #efefe7;
+    --secondary-foreground: #f1eae2;
+
+    --muted: hsl(40, 100%, 99%);
+    --muted-foreground: hsl(25 5.3% 44.7%);
+
+    --accent: hsl(60 4.8% 95.9%);
+    --accent-foreground: hsl(137, 13%, 56%);
+
+    --destructive: #332d26;
+    --destructive-foreground: hsl(60 9.1% 97.8%);
+
+    --border: hsl(120, 6%, 90%);
+    --input: hsl(20 5.9% 90%);
+    --ring: hsl(20 14.3% 4.1%);
+    --text: hsl(103, 4%, 35%);
+    --text-foreground: hsl(110, 4%, 27%);
+    --radius: 0.5rem;
+    --top-text: #605e5a;
+  }
+
+  .dark {
+    --background: hsl(20 14.3% 4.1%);
+    --foreground: hsl(60 9.1% 97.8%);
+
+    --card: hsl(20 14.3% 4.1%);
+    --card-foreground: hsl(60 9.1% 97.8%);
+
+    --popover: hsl(20 14.3% 4.1%);
+    --popover-foreground: hsl(60 9.1% 97.8%);
+
+    --primary: hsl(60 9.1% 97.8%);
+    --primary-foreground: hsl(24 9.8% 10%);
+
+    --secondary: hsl(12 6.5% 15.1%);
+    --secondary-foreground: hsl(60 9.1% 97.8%);
+
+    --muted: hsl(12 6.5% 15.1%);
+    --muted-foreground: hsl(24 5.4% 63.9%);
+
+    --accent: hsl(12 6.5% 15.1%);
+    --accent-foreground: hsl(60 9.1% 97.8%);
+
+    --destructive: hsl(0 62.8% 30.6%);
+    --destructive-foreground: hsl(60 9.1% 97.8%);
+
+    --border: hsl(12 6.5% 15.1%);
+    --input: hsl(12 6.5% 15.1%);
+    --ring: hsl(24 5.7% 82.9%);
+  }
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poly", serif;
+}
+
+p{
+  @apply text-text
+}
+
+.max_width {
+  @apply max-w-[1440px] mx-auto w-[90%];
+}
+
+#AccordianTitle h2 button {
+  @apply focus:outline-none text-left;
+}
+
+#AccordianTitle section div {
+  @apply text-[14px] font-normal font-["Roboto"];
+}
+
+.undertone #AccordianTitle h2 button span svg {
+  @apply text-[25px] rounded-full text-text-foreground  p-[3px] bg-gray-400;
+}
